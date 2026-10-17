@@ -3,7 +3,7 @@
 A 3-page accessible microsite for audio and video storytelling, built with semantic HTML5, Sass, CSS Grid, Flexbox and a container query. No frameworks.
 
 # Project Structure
-
+```text
 storycast/
 ├── index.html                  Home page
 ├── about.html                  About / Access page
@@ -29,6 +29,7 @@ storycast/
 │   ├── media/                  Images, audio and video
 │   └── transcripts/            WebVTT caption file
 └── docs/                       Research, sitemap and documentation PDFs
+```
 
 # Accessibility Checklist
 
