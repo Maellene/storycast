@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A voice to remember | StoryCast</title>
+  <meta name="description" content="A short video story about finding your voice, with captions and a full transcript.">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <p class="site-header__logo">StoryCast</p>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="../index.html">Home</a></li>
+          <li><a class="site-nav__link" href="story.html" aria-current="page">Stories</a></li>
+          <li><a class="site-nav__link" href="../about.html">About / Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container story-layout">
+
+      <article class="stack">
+        <header class="flow">
+          <h1>A voice to remember</h1>
+          <p>Video story </p>
+        </header>
+
+        <figure class="flow">
+          <video class="story-media__video" controls preload="metadata" poster="../assets/media/voice.png">
+            <source src="../assets/media/voice-to-remember.mp4" type="video/mp4">
+            <track kind="captions" src="../assets/transcripts/voice-to-remember.en.vtt"
+                   srclang="en" label="English" default>
+            Your browser does not support video.
+            <a href="../assets/media/voice-to-remember.mp4">Download the video</a>
+            or read the transcript below.
+          </video>
+          <figcaption>
+            Video of the storyteller speaking. English captions are available
+            with the CC button. A full transcript is below.
+          </figcaption>
+        </figure>
+
+        <section class="flow" aria-labelledby="about-story-heading">
+          <h2 id="about-story-heading">About this story</h2>
+          <p>A short personal story about finding the courage to speak, and why sharing it matters.</p>
+        </section>
+
+        <section class="transcript" aria-labelledby="transcript-heading">
+          <h2 id="transcript-heading" class="transcript__title">Transcript</h2>
+          <details class="transcript__details">
+            <summary class="transcript__toggle">
+              <span class="transcript__toggle-text transcript__toggle-text--closed">Show full transcript <span aria-hidden="true">↓</span></span>
+              <span class="transcript__toggle-text transcript__toggle-text--open">Hide full transcript <span aria-hidden="true">↑</span></span>
+            </summary>
+            <div class="transcript__full flow">
+              <p>Hello, and welcome to StoryCast.</p>
+              <p>I never thought my story could inspire someone else. But when I started sharing, I realized that my experiences belong to a bigger story.</p>
+              <p>I used to be afraid of speaking. Then someone listened.</p>
+              <p>Now I tell my story so that others know they are not alone.</p>
+            </div>
+          </details>
+          <figure class="transcript__preview">
+            <blockquote class="transcript__quote">
+              <p>“I never thought my story could inspire someone else. But when I started sharing, I realized that my experiences belong to a bigger story.”</p>
+            </blockquote>
+            <figcaption class="transcript__author">— The storyteller</figcaption>
+          </figure>
+        </section>
+      </article>
+
+      <aside class="related" aria-labelledby="related-heading">
+        <h2 class="related__title" id="related-heading">Related stories</h2>
+        <ul class="related__list">
+
+          <li class="media-card-wrapper">
+            <article class="media-card media-card--compact">
+              <img class="media-card__thumb" src="../assets/media/community.png"
+                   alt="A group of women sitting together and talking outdoors.">
+              <div class="media-card__body">
+                <h3 class="media-card__title">The Snail and the Rose-Tree</h3>
+                <p class="media-card__meta">Audio story 5:05</p>
+                <a class="media-card__action" href="story-2.html">Listen<span class="visually-hidden"> to The Snail and the Rose-Tree</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="media-card-wrapper">
+            <article class="media-card media-card--compact">
+              <img class="media-card__thumb" src="../assets/media/education.png"
+                   alt="A man raising his fist in the air.">
+              <div class="media-card__body">
+                <h3 class="media-card__title">The Little Match Girl</h3>
+                <p class="media-card__meta">Audio story 7:19</p>
+                <a class="media-card__action" href="story-3.html">Listen<span class="visually-hidden"> to The Little Match Girl</span></a>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__copyright">&copy; 2026 StoryCast. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

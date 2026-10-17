@@ -1,0 +1,42 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+
+@layer base {
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: $font-body;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-text;
+    background: $color-bg;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $font-heading;
+    line-height: $line-height-heading;
+  }
+
+  h1 { font-size: $font-size-h1; }
+  h2 { font-size: $font-size-h2; }
+  h3 { font-size: $font-size-h3; }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  :focus-visible {
+    outline: 3px solid $color-focus;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #ffffff;
+  }
+}

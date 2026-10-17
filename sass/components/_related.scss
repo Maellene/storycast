@@ -1,0 +1,20 @@
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .related {
+    display: grid;
+    gap: $space-lg;
+    align-content: start;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__list {
+      display: grid;
+      gap: $space-xl;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}

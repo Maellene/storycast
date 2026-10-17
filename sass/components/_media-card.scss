@@ -1,0 +1,79 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .media-card-wrapper {
+    container-type: inline-size;
+    container-name: media-card;
+  }
+
+  .media-card {
+    position: relative;
+    display: grid;
+    gap: $space-md;
+    padding: $space-lg;
+    background: $color-surface;
+    cursor: pointer;
+
+    &__thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    &__body {
+      display: grid;
+      gap: $space-xs;
+      align-content: start;
+      line-height: 1.4;
+    }
+
+    &__title {
+      font-size: 1.125rem;
+    }
+
+    &__action {
+      justify-self: start;
+      font-weight: 700;
+    }
+
+    &--compact {
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  .media-card__action::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .media-card__action:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .media-card:hover .media-card__title {
+    text-decoration: underline;
+  }
+
+  .media-card:has(.media-card__action:focus-visible) {
+    outline: 3px solid $color-focus;
+    outline-offset: 3px;
+  }
+
+  @container media-card (min-width: 40rem) {
+    .media-card:not(.media-card--compact) {
+      grid-template-columns: 14rem 1fr;
+      align-items: center;
+    }
+  }
+
+  @container media-card (min-width: 20rem) {
+    .media-card--compact {
+      grid-template-columns: 7rem 1fr;
+      align-items: start;
+    }
+  }
+}

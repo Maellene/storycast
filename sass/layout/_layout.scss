@@ -1,0 +1,50 @@
+@use "../abstracts/spacing" as *;
+@use "../abstracts/mixins" as *;
+
+@layer layout {
+  .container {
+    width: min(100% - 2rem, $container-max);
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: $space-xl;
+  }
+
+  .flow > * + * {
+    margin-top: $space-md;
+  }
+
+  .stack {
+    display: grid;
+    gap: $space-lg;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: $space-xl;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    margin-top: $space-lg;
+  }
+
+  .two-col {
+    display: grid;
+    gap: $space-lg;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .three-col {
+    display: grid;
+    gap: $space-lg;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+
+  .story-layout {
+    display: grid;
+    gap: $space-xl;
+
+    @include up($bp-md) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+}

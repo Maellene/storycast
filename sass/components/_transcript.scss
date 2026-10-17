@@ -1,0 +1,91 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .transcript {
+    container-type: inline-size;
+    container-name: transcript;
+    position: relative;
+    padding: $space-lg;
+    background: $color-surface-warm;
+    border: 1px solid $color-border-warm;
+    border-radius: 12px;
+
+    &__title {
+      font-size: 1.25rem;
+      color: $color-brand;
+    }
+
+    &__toggle {
+      display: block;
+      margin-top: $space-xs;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: $color-brand;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__toggle-text {
+      display: inline;
+    }
+
+    &__toggle-text--open {
+      display: none;
+    }
+
+    &__full {
+      margin-top: $space-md;
+    }
+
+    &__preview {
+      margin: $space-md 0 0;
+      padding: $space-md $space-lg;
+      border-left: 4px solid $color-brand;
+      border-radius: 0 8px 8px 0;
+      background: $color-bg;
+      font-style: normal;
+    }
+
+    &__quote {
+      margin: 0;
+      font-size: 1.0625rem;
+    }
+
+    &__author {
+      margin-top: $space-sm;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      font-style: normal;
+    }
+  }
+
+  .transcript__details[open] .transcript__toggle-text--closed {
+    display: none;
+  }
+
+  .transcript__details[open] .transcript__toggle-text--open {
+    display: inline;
+  }
+
+  .transcript__details[open] ~ .transcript__preview {
+    display: none;
+  }
+
+  @container transcript (min-width: 30rem) {
+    .transcript__toggle {
+      position: absolute;
+      top: $space-lg;
+      right: $space-lg;
+      margin-top: 0;
+    }
+  }
+}

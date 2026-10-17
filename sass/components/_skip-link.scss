@@ -1,0 +1,19 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    padding: $space-sm $space-md;
+    background: $color-skip-bg;
+    color: #ffffff;
+    z-index: 100;
+
+    &:focus {
+      left: $space-md;
+      top: $space-md;
+    }
+  }
+}

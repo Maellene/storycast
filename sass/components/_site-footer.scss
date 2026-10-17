@@ -1,0 +1,15 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .site-footer {
+    background: $color-brand;
+    color: $color-on-brand;
+    padding-block: $space-lg;
+    text-align: center;
+
+    &__copyright {
+      font-size: 0.875rem;
+    }
+  }
+}

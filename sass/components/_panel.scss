@@ -1,0 +1,25 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .panel {
+    padding: $space-lg;
+    background: $color-surface;
+
+    &--action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $space-md;
+    }
+
+    &__title {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+
+    &__action {
+      margin-top: auto;
+    }
+  }
+}

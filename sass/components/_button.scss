@@ -1,0 +1,18 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .button {
+    display: inline-block;
+    padding: $space-sm $space-lg;
+    background: $color-action;
+    color: $color-text;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+
+    &:hover {
+      background: $color-action-hover;
+    }
+  }
+}

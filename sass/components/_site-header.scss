@@ -1,0 +1,23 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .site-header {
+    background: $color-brand;
+    color: $color-on-brand;
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: $space-md;
+      padding-block: $space-lg;
+    }
+
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}

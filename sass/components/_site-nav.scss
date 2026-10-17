@@ -1,0 +1,26 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .site-nav {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-lg;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__link {
+      color: $color-on-brand;
+      text-decoration: none;
+      padding-block: $space-xs;
+      border-bottom: 2px solid transparent;
+
+      &:hover,
+      &[aria-current="page"] {
+        border-bottom-color: $color-on-brand;
+      }
+    }
+  }
+}
